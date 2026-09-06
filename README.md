@@ -1,5 +1,8 @@
 # 🏥 Smart Patient Tracker — Clinical ICU Monitoring & Family Care Platform
 
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Visit_Platform-2A85FF?style=for-the-badge&logo=google-chrome&logoColor=white)](https://avishkarranjane.github.io/Smart-Patient-Tracker/)
+[![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Deployed_Active-2ea44f?style=for-the-badge&logo=github)](https://avishkarranjane.github.io/Smart-Patient-Tracker/)
+
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue.svg?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-19.x-61DAFB.svg?style=flat-square&logo=react)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-8.x-646CFF.svg?style=flat-square&logo=vite)](https://vitejs.dev/)
@@ -7,6 +10,8 @@
 [![HIPAA Privacy](https://img.shields.io/badge/HIPAA_Isolation-Enforced-success.svg?style=flat-square)](#-security--privacy-architecture)
 [![Status](https://img.shields.io/badge/Production_Ready-100%25-brightgreen.svg?style=flat-square)](#)
 
+> 🌐 **Live Deployed Application**: [https://avishkarranjane.github.io/Smart-Patient-Tracker/](https://avishkarranjane.github.io/Smart-Patient-Tracker/)
+>
 > **A next-generation hospital ICU monitoring, dynamic bed management, and dedicated family communication system.** Built with strict role-based access control, real-time medical telemetry, spreadsheet-style inline cell editing, and the signature **Apple Health Glass** design system.
 
 ---
