@@ -1,0 +1,58 @@
+/* ============================================================
+   tokens.css — SINGLE SOURCE OF TRUTH for the design system
+   "Apple Health Glass" theme
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* Canvas & glass */
+  --canvas:        #EEF2F7;
+  --glass:         rgba(255,255,255,0.62);
+  --glass-strong:  rgba(255,255,255,0.82);
+  --glass-border:  rgba(255,255,255,0.90);
+
+  /* Ink (text) */
+  --ink:           #1C2331;
+  --ink-soft:      #5B6472;
+  --ink-faint:     #8A93A3;
+  --divider:       rgba(28,35,49,0.08);
+
+  /* Surface & borders */
+  --bg-surface:    #FFFFFF;
+  --bg-subtle:     #F6F8FB;
+  --bg-hover:      #EDF2F8;
+  --border-color:  rgba(28,35,49,0.12);
+  --border-subtle: rgba(28,35,49,0.08);
+
+  /* Text color aliases */
+  --text-primary:   #1C2331;
+  --text-secondary: #5B6472;
+  --text-muted:     #8A93A3;
+
+  /* Brand */
+  --blue:          #4C8DFF;
+  --blue-soft:     rgba(76,141,255,0.12);
+  --lavender:      #8C7CF0;
+  --lavender-soft: rgba(140,124,240,0.12);
+
+  /* Status — ONLY semantic loud colors */
+  --mint:          #2FBD85;
+  --mint-soft:     rgba(47,189,133,0.14);
+  --amber:         #F5A93F;
+  --amber-soft:    rgba(245,169,63,0.16);
+  --coral:         #FF5C6C;
+  --coral-soft:    rgba(255,92,108,0.14);
+
+  /* Aurora */
+  --aurora-blue:   #BFD7FF;
+  --aurora-pink:   #FFD6E8;
+  --aurora-mint:   #D6FFEA;
+
+  /* Shape */
+  --radius-lg: 28px;
+  --radius-md: 18px;
+  --radius-sm: 12px;
+  --shadow-soft: 0 8px 30px rgba(28,35,49,0.06), 0 2px 8px rgba(28,35,49,0.04);
+  --shadow-lift: 0 14px 40px rgba(28,35,49,0.11), 0 4px 12px rgba(28,35,49,0.06);
+  --ease: cubic-bezier(.22,1,.36,1);
+}

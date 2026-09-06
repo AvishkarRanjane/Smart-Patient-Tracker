@@ -1,0 +1,400 @@
+/* pages/WardEditor/wardEditor.module.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+}
+
+.wardBadge {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: rgba(76, 141, 255, 0.12);
+  color: var(--blue);
+}
+
+.sub {
+  margin: 4px 0 0 0;
+  font-size: 13.5px;
+  color: var(--ink-soft);
+}
+
+.topActions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.actionBtn {
+  padding: 10px 18px;
+  border-radius: 12px;
+  border: none;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: inherit;
+  transition: all 0.18s var(--ease);
+}
+
+.primaryBtn {
+  background: var(--blue);
+  color: white;
+  box-shadow: 0 4px 14px rgba(76, 141, 255, 0.3);
+}
+
+.primaryBtn:hover {
+  background: #3879f0;
+  transform: translateY(-1px);
+}
+
+.secondaryBtn {
+  background: #FFFFFF;
+  border: 1px solid var(--border-color);
+  color: var(--ink);
+}
+
+.secondaryBtn:hover {
+  background: var(--bg-hover);
+  border-color: var(--blue);
+}
+
+/* KPI Cards Row */
+.kpiGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.kpiCard {
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+  background: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.kpiLabel {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--ink-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.kpiValue {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+}
+
+.kpiSub {
+  font-size: 11.5px;
+  color: var(--ink-soft);
+}
+
+/* Ward Config Collapsible Card */
+.configCard {
+  border-radius: var(--radius-lg);
+  padding: 24px 28px;
+  background: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-soft);
+}
+
+.configHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.configTitle {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.configGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid var(--divider);
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.fieldLabel {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--ink-soft);
+}
+
+.fieldInput {
+  padding: 9px 14px;
+  border-radius: 10px;
+  border: 1.5px solid var(--border-color);
+  font-size: 13px;
+  font-family: inherit;
+  color: var(--ink);
+  background: #FFFFFF;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.fieldInput:focus {
+  border-color: var(--blue);
+}
+
+/* Editable Cell Table */
+.tableCard {
+  border-radius: var(--radius-lg);
+  padding: 24px 28px;
+  background: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.tableToolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.tableTitle {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hintPill {
+  font-size: 11.5px;
+  color: var(--blue);
+  background: rgba(76, 141, 255, 0.09);
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.tableWrap {
+  overflow-x: auto;
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+}
+
+.cellTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+  text-align: left;
+}
+
+.cellTable th {
+  background: #F8FAFC;
+  padding: 12px 14px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--ink-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: 1.5px solid var(--border-subtle);
+  white-space: nowrap;
+}
+
+.cellTable td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--ink);
+  position: relative;
+  transition: background 0.15s ease;
+}
+
+.cellTable tr:hover td {
+  background: rgba(76, 141, 255, 0.02);
+}
+
+.editableCell {
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 4px 6px;
+  margin: -4px -6px;
+  transition: all 0.15s ease;
+}
+
+.editableCell:hover {
+  background: rgba(76, 141, 255, 0.08);
+  box-shadow: 0 0 0 1px var(--blue);
+}
+
+.inlineInputWrap {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.inlineInput {
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1.5px solid var(--blue);
+  font-size: 12.5px;
+  font-family: inherit;
+  outline: none;
+  background: #FFFFFF;
+  color: var(--ink);
+  min-width: 100px;
+}
+
+.saveBtn {
+  background: var(--mint);
+  border: none;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cancelCellBtn {
+  background: var(--bg-hover);
+  border: none;
+  color: var(--ink-soft);
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.statusPill {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.statusStable {
+  background: var(--mint-soft);
+  color: #1c8a5f;
+}
+
+.statusWatch {
+  background: var(--amber-soft);
+  color: #b8791f;
+}
+
+.statusCritical {
+  background: var(--coral-soft);
+  color: #c73a48;
+}
+
+.bedDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.actionCell {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.rowActionBtn {
+  padding: 4px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background: #FFFFFF;
+  color: var(--ink-soft);
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.rowActionBtn:hover {
+  background: var(--bg-hover);
+  color: var(--ink);
+  border-color: var(--blue);
+}
+
+@media (max-width: 1024px) {
+  .kpiGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .configGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .kpiGrid {
+    grid-template-columns: 1fr;
+  }
+  .configGrid {
+    grid-template-columns: 1fr;
+  }
+}

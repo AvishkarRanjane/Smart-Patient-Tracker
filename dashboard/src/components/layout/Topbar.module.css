@@ -1,0 +1,110 @@
+/* components/layout/Topbar.module.css */
+.topbar {
+  border-radius: var(--radius-lg); padding: 13px 20px;
+  display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+  box-shadow: var(--shadow-soft); position: sticky; top: 16px; z-index: 5; margin-bottom: 22px;
+}
+.wardSelect {
+  appearance: none; border: none; background: rgba(28,35,49,0.045); font-weight: 600; font-size: 13px;
+  padding: 9px 30px 9px 13px; border-radius: 12px; color: var(--ink); cursor: pointer; font-family: inherit;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%235B6472' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 11px center;
+}
+.searchWrap { position: relative; flex: 1; max-width: 320px; }
+.searchWrap svg { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--ink-faint); }
+.searchInput {
+  width: 100%; border: none; background: rgba(28,35,49,0.045); border-radius: 12px;
+  padding: 9px 13px 9px 34px; font-size: 13px; font-family: inherit; color: var(--ink); outline: none;
+  transition: box-shadow .2s var(--ease);
+}
+.searchInput:focus { box-shadow: 0 0 0 3px var(--blue-soft); }
+.right { margin-left: auto; display: flex; align-items: center; gap: 12px; }
+.canaryPill {
+  display: flex; align-items: center; gap: 6px; padding: 6px 11px; border-radius: 20px;
+  background: rgba(140,124,240,0.1); font-weight: 600; font-size: 11.5px; color: #6550d4; cursor: default;
+}
+.canaryDot {
+  width: 6px; height: 6px; border-radius: 50%; background: var(--lavender);
+  animation: canary-beat 2s ease-in-out infinite;
+}
+.clock { text-align: right; }
+.clockTime { font-weight: 700; font-size: 14px; letter-spacing: -0.01em; }
+.clockDate { font-size: 10.5px; color: var(--ink-faint); }
+.uptime { text-align: right; }
+.uptimeLabel { font-size: 9.5px; color: var(--ink-faint); font-weight: 700; text-transform: uppercase; }
+.uptimeVal { font-size: 12px; font-weight: 700; color: var(--mint); font-variant-numeric: tabular-nums; }
+.statusPill {
+  display: flex; align-items: center; gap: 7px; padding: 7px 13px; border-radius: 20px;
+  background: var(--mint-soft); font-weight: 600; font-size: 12px; color: #1c8a5f;
+  transition: background .3s var(--ease), color .3s var(--ease);
+}
+.statusPill.alert { background: var(--coral-soft); color: #c73a48; }
+.statusDot { width: 7px; height: 7px; border-radius: 50%; background: var(--mint); flex-shrink: 0; }
+.statusPill.alert .statusDot { background: var(--coral); animation: pulse-dot 1.4s infinite; }
+
+.userBadge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 10px 4px 5px;
+  border-radius: 20px;
+  background: rgba(28, 35, 49, 0.04);
+  border: 1px solid var(--border-subtle);
+  cursor: pointer;
+  transition: all 0.2s var(--ease);
+  text-decoration: none;
+}
+
+.userBadge:hover {
+  background: rgba(28, 35, 49, 0.08);
+  border-color: rgba(28, 35, 49, 0.15);
+}
+
+.userAvatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10.5px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.userDoc {
+  background: linear-gradient(135deg, #2A85FF, #1967d2);
+}
+
+.userStaff {
+  background: linear-gradient(135deg, #2FBD85, #1d8f63);
+}
+
+.userFam {
+  background: linear-gradient(135deg, #FF5B79, #e03b5c);
+}
+
+.userTextWrap {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.userName {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+.userRole {
+  font-size: 9.5px;
+  color: var(--ink-faint);
+  font-weight: 600;
+}
+
+@media (max-width: 760px) {
+  .topbar { flex-wrap: wrap; }
+  .searchWrap { order: 3; max-width: 100%; }
+}

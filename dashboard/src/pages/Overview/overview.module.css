@@ -1,0 +1,665 @@
+/* pages/Overview/overview.module.css */
+.head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.sub {
+  font-size: 13px;
+  color: var(--ink-faint);
+  margin-top: 3px;
+  font-weight: 500;
+}
+
+.search {
+  border: none;
+  background: rgba(28, 35, 49, 0.045);
+  border-radius: 12px;
+  padding: 10px 16px;
+  font-size: 13px;
+  font-family: inherit;
+  color: var(--ink);
+  outline: none;
+  transition: box-shadow 0.2s var(--ease);
+}
+
+.search:focus {
+  box-shadow: 0 0 0 3px var(--blue-soft);
+}
+
+.kpiRow {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.kpiCard {
+  padding: 20px 22px !important;
+  border-radius: 16px !important;
+  border: 1px solid var(--glass-border) !important;
+  transition: transform 0.2s var(--ease), box-shadow 0.2s var(--ease);
+}
+
+.kpiCard:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lift);
+}
+
+.kpiLabel {
+  font-size: 11px;
+  color: var(--ink-faint);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.kpiValue {
+  font-size: 30px;
+  font-weight: 800;
+  margin-top: 8px;
+  letter-spacing: -0.02em;
+}
+
+.kpiSub {
+  font-size: 11px;
+  color: var(--ink-faint);
+  margin-top: 4px;
+}
+
+.mint     { color: #1c8a5f; }
+.amber    { color: #b8791f; }
+.coral    { color: #c73a48; }
+.blue     { color: var(--blue); }
+.lavender { color: #6550d4; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  gap: 22px;
+}
+
+.card {
+  border-radius: 20px;
+  padding: 22px 22px;
+  box-shadow: var(--shadow-soft);
+  cursor: pointer;
+  border: 1.5px solid var(--glass-border);
+  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease), border-color 0.25s var(--ease);
+  box-sizing: border-box;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lift);
+  border-color: rgba(76, 141, 255, 0.4);
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.cardName {
+  font-weight: 800;
+  font-size: 16px;
+  color: var(--ink);
+}
+
+.cardBed {
+  font-size: 12px;
+  color: var(--ink-faint);
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.cardDx {
+  font-size: 11.5px;
+  color: var(--ink-soft);
+  margin-bottom: 16px;
+  font-weight: 600;
+  background: rgba(76, 141, 255, 0.07);
+  padding: 5px 11px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.vitalsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 11px;
+}
+
+.vitalChip {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(28, 35, 49, 0.04);
+}
+
+.vitalChip svg {
+  width: 14px;
+  height: 14px;
+  opacity: 0.7;
+  flex-shrink: 0;
+}
+
+.vitalNum {
+  font-weight: 700;
+  font-size: 13.5px;
+}
+
+.vitalUnit {
+  font-size: 10px;
+  color: var(--ink-faint);
+  font-weight: 600;
+}
+
+.cardFoot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--divider);
+}
+
+.updated {
+  font-size: 11px;
+  color: var(--ink-faint);
+  font-weight: 500;
+}
+
+.mlChip {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: var(--lavender-soft);
+  color: #6550d4;
+}
+
+.ml_elevated {
+  background: var(--amber-soft) !important;
+  color: #b8791f !important;
+}
+
+.ml_high {
+  background: var(--coral-soft) !important;
+  color: #c73a48 !important;
+}
+
+@media (max-width: 1200px) {
+  .kpiRow { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 960px) {
+  .kpiRow { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* --- Customizable Dashboard Toolbar --- */
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 22px;
+  padding: 12px 18px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 16px;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+}
+
+.toolbarLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.viewTabs {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(28, 35, 49, 0.06);
+  padding: 4px;
+  border-radius: 12px;
+}
+
+.viewTab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 13px;
+  border-radius: 9px;
+  border: none;
+  background: transparent;
+  color: var(--ink-soft);
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: inherit;
+}
+
+.viewTab:hover {
+  color: var(--ink);
+}
+
+.viewTabActive {
+  background: #ffffff;
+  color: var(--ink) !important;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+}
+
+.toolbarRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filterSelect, .sortSelect {
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border-subtle);
+  background: #ffffff;
+  color: var(--ink);
+  font-size: 12.5px;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.filterSelect:focus, .sortSelect:focus {
+  border-color: var(--blue);
+}
+
+.kpiToggleBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border-subtle);
+  background: #ffffff;
+  color: var(--ink-soft);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.kpiToggleBtn:hover {
+  color: var(--ink);
+  border-color: rgba(28, 35, 49, 0.2);
+}
+
+/* --- Bed Matrix / Floor Map View --- */
+.matrixGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 20px;
+}
+
+.bedCard {
+  border-radius: 18px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(14px);
+  border: 1.5px solid var(--glass-border);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  min-height: 220px;
+  box-sizing: border-box;
+}
+
+.bedCard:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lift);
+}
+
+.bedCardOccupied {
+  border-left: 5px solid #2A85FF;
+}
+
+.bedCardAvailable {
+  border-left: 5px solid #2FBD85;
+  border-style: dashed;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.bedCardCleaning {
+  border-left: 5px solid #F59E0B;
+  background: rgba(254, 243, 199, 0.2);
+}
+
+.bedCardMaintenance {
+  border-left: 5px solid #94A3B8;
+  background: rgba(241, 245, 249, 0.5);
+}
+
+.bedCardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.bedNumberBadge {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.bedStatusPill {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 20px;
+  text-transform: capitalize;
+}
+
+.statusOccupied {
+  background: rgba(42, 133, 255, 0.12);
+  color: #1967d2;
+}
+
+.statusAvailable {
+  background: rgba(47, 189, 133, 0.15);
+  color: #167a53;
+}
+
+.statusCleaning {
+  background: rgba(245, 158, 11, 0.15);
+  color: #b45309;
+}
+
+.statusMaintenance {
+  background: rgba(148, 163, 184, 0.2);
+  color: #475569;
+}
+
+.bedPatientName {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+.bedDiagnosis {
+  font-size: 12px;
+  color: var(--ink-soft);
+  margin-bottom: 14px;
+  line-height: 1.35;
+}
+
+.bedVitalsRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.bedVitalPill {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 9px;
+  background: rgba(28, 35, 49, 0.04);
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.bedActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(28, 35, 49, 0.06);
+}
+
+.bedActionBtn {
+  flex: 1;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border-subtle);
+  background: #ffffff;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.bedActionBtn:hover {
+  background: rgba(42, 133, 255, 0.06);
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
+.bedActionBtnPrimary {
+  background: var(--blue);
+  color: #ffffff;
+  border-color: var(--blue);
+}
+
+.bedActionBtnPrimary:hover {
+  background: #1967d2;
+  color: #ffffff;
+}
+
+/* Empty / Available Bed UI */
+.emptyBedArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.emptyBedIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(47, 189, 133, 0.1);
+  color: #167a53;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.emptyBedTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+.emptyBedSub {
+  font-size: 12px;
+  color: var(--ink-faint);
+  margin-bottom: 16px;
+}
+
+/* Cleaning Bed UI */
+.cleaningBedArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.cleaningIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(245, 158, 11, 0.12);
+  color: #b45309;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+/* --- High-Density Clinical Triage Table View --- */
+.tableContainer {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(18px);
+  border-radius: 18px;
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-soft);
+  overflow-x: auto;
+  margin-top: 6px;
+}
+
+.clinicalTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 13px;
+}
+
+.clinicalTable th {
+  background: rgba(248, 250, 252, 0.95);
+  padding: 13px 16px;
+  font-weight: 700;
+  color: var(--ink-soft);
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: 1.5px solid rgba(28, 35, 49, 0.08);
+  white-space: nowrap;
+}
+
+.thSortable {
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.15s;
+}
+
+.thSortable:hover {
+  color: var(--ink);
+}
+
+.clinicalTable td {
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(28, 35, 49, 0.05);
+  color: var(--ink);
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.tableRow {
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.tableRow:hover {
+  background: rgba(42, 133, 255, 0.04);
+}
+
+.patientCellMain {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.patientCellName {
+  font-weight: 800;
+  color: var(--ink);
+  font-size: 14px;
+}
+
+.patientCellSub {
+  font-size: 11px;
+  color: var(--ink-faint);
+}
+
+.badgeRisk {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.badgeStable {
+  background: rgba(47, 189, 133, 0.12);
+  color: #167a53;
+}
+
+.badgeWatch {
+  background: rgba(245, 158, 11, 0.15);
+  color: #b45309;
+}
+
+.badgeCritical {
+  background: rgba(239, 68, 68, 0.15);
+  color: #dc2626;
+}
+
+.vitalValueHighlight {
+  font-weight: 700;
+  font-size: 13.5px;
+}
+
+.tableActionBtn {
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border-subtle);
+  background: #ffffff;
+  color: var(--blue);
+  font-size: 11.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.tableActionBtn:hover {
+  background: var(--blue);
+  color: #ffffff;
+  border-color: var(--blue);
+}
+

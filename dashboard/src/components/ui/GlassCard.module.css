@@ -1,0 +1,11 @@
+/* components/ui/GlassCard.module.css */
+.card {
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  padding: 20px;
+  transition: transform .25s var(--ease), box-shadow .25s var(--ease);
+}
+.card[onClick]:hover, .card:has(> *):global(.clickable):hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lift);
+}

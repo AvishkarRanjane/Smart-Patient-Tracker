@@ -1,0 +1,135 @@
+/* pages/Devices/devices.module.css */
+.head    { display:flex; align-items:baseline; justify-content:space-between; margin-bottom:18px; flex-wrap:wrap; gap:8px; }
+.title   { font-size:22px; font-weight:800; letter-spacing:-0.02em; }
+.sub     { font-size:12.5px; color:var(--ink-faint); margin-top:2px; font-weight:500; }
+.counts  { display:flex; gap:12px; font-size:12px; font-weight:600; }
+.grid    { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:16px; }
+.card    { border-radius:var(--radius-lg); padding:18px; border:1.5px solid var(--glass-border); transition:all .25s var(--ease); cursor:pointer; }
+.card:hover { transform:translateY(-3px); box-shadow: 0 12px 24px rgba(0,0,0,0.08); border-color: var(--blue); }
+.cardHead { display:flex; align-items:center; gap:12px; margin-bottom:14px; }
+.icon    { width:42px; height:42px; border-radius:13px; background:var(--blue-soft); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.icon.advisory    { background:var(--amber-soft); }
+.icon.compromised { background:var(--coral-soft); }
+.devName    { font-weight:700; font-size:13.5px; }
+.devPatient { font-size:11px; color:var(--ink-faint); }
+.trust { margin-left:auto; font-size:10px; font-weight:700; padding:4px 10px; border-radius:20px; }
+.trust.trusted    { background:var(--mint-soft);  color:#1c8a5f; }
+.trust.advisory   { background:var(--amber-soft); color:#b8791f; }
+.trust.compromised { background:var(--coral-soft); color:#c73a48; }
+.meta  { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:12px; }
+.metaLabel { font-size:9.5px; font-weight:700; color:var(--ink-faint); text-transform:uppercase; letter-spacing:.05em; }
+.metaVal   { font-size:12px; font-weight:600; margin-top:2px; }
+.filterTabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.filterTab {
+  padding: 8px 16px;
+  border-radius: 10px;
+  background: var(--bg-surface);
+  border: 1.5px solid var(--border-color);
+  color: var(--ink-soft);
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.filterTab:hover {
+  background: var(--bg-hover);
+  border-color: var(--blue);
+}
+
+.filterTabActive {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: white;
+  box-shadow: 0 4px 12px rgba(76, 141, 255, 0.25);
+}
+
+.filterTabActive:hover {
+  background: var(--blue);
+  color: white;
+}
+
+.liveMetricsCard {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.metricTitle {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--ink-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.metricMainRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.metricValBig {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--ink);
+  font-family: var(--font-mono, monospace);
+}
+
+.metricSubLine {
+  font-size: 11.5px;
+  color: var(--ink-faint);
+  line-height: 1.35;
+}
+
+.telemetryBtn {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 9px;
+  border: 1px solid rgba(76, 141, 255, 0.3);
+  background: rgba(76, 141, 255, 0.08);
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-family: inherit;
+}
+
+.card:hover .telemetryBtn {
+  background: var(--blue);
+  color: white;
+  border-color: var(--blue);
+}
+
+.footer { border-top:1px solid var(--divider); padding-top:10px; display:flex; justify-content:space-between; align-items:center; }
+.egress { display:flex; align-items:center; gap:6px; font-size:11px; font-weight:600; color:#1c8a5f; }
+.egress.blocked { color:#c73a48; }
+.egressDot { width:7px; height:7px; border-radius:50%; background:var(--mint); }
+.egressDot.blocked { background:var(--coral); animation:pulse-dot 1s infinite; }
+.lastCheck { font-size:10px; color:var(--ink-faint); }
+.advisoryBanner { background:var(--amber-soft); border:1px solid rgba(245,169,63,.3); border-radius:var(--radius-sm); padding:8px 12px; font-size:11px; font-weight:600; color:#b8791f; display:flex; align-items:flex-start; gap:8px; margin-top:10px; }
+
+

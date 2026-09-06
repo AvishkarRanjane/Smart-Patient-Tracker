@@ -1,0 +1,237 @@
+/* components/patient/rapidResponse.module.css */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.42);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1100;
+  padding: 20px;
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.97); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.modal {
+  background: #FFFFFF;
+  border: 1.5px solid rgba(255, 92, 108, 0.35);
+  border-radius: 22px;
+  box-shadow: 0 24px 64px rgba(28, 35, 49, 0.2), 0 4px 16px rgba(28, 35, 49, 0.08);
+  width: 100%;
+  max-width: 640px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.warningIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: rgba(255, 92, 108, 0.12);
+  color: var(--coral);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 800;
+  color: #c73a48;
+  letter-spacing: -0.01em;
+}
+
+.sub {
+  margin: 4px 0 0 0;
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+.closeBtn {
+  margin-left: auto;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-color);
+  color: var(--ink-soft);
+  border-radius: 10px;
+  width: 34px;
+  height: 34px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.closeBtn:hover {
+  background: var(--bg-hover);
+  color: var(--ink);
+}
+
+.noticeText {
+  font-size: 13.5px;
+  color: var(--ink);
+  line-height: 1.5;
+  margin: 0 0 4px 0;
+}
+
+.emergencyGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.codeBtn {
+  text-align: left;
+  padding: 16px 18px;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  border: 1.5px solid;
+}
+
+.codeBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(28, 35, 49, 0.08);
+}
+
+.codeTitle {
+  font-size: 15px;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.codeDesc {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: 0.9;
+}
+
+.codeBlue {
+  background: #F0F6FF;
+  border-color: #BFD7FF;
+  color: #1E3A8A;
+}
+
+.codeBlue .codeTitle {
+  color: #1E40AF;
+}
+
+.codeBlue .codeDesc {
+  color: #2563EB;
+}
+
+.codeBlue:hover {
+  background: #E0EDFF;
+  border-color: var(--blue);
+}
+
+.codeYellow {
+  background: #FFFBEB;
+  border-color: #FDE68A;
+  color: #92400E;
+}
+
+.codeYellow .codeTitle {
+  color: #B45309;
+}
+
+.codeYellow .codeDesc {
+  color: #D97706;
+}
+
+.codeYellow:hover {
+  background: #FEF3C7;
+  border-color: var(--amber);
+}
+
+.codeOrange {
+  background: #ECFDF5;
+  border-color: #A7F3D0;
+  color: #065F46;
+}
+
+.codeOrange .codeTitle {
+  color: #047857;
+}
+
+.codeOrange .codeDesc {
+  color: #059669;
+}
+
+.codeOrange:hover {
+  background: #D1FAE5;
+  border-color: var(--mint);
+}
+
+.dispatchedBanner {
+  background: var(--coral-soft);
+  border: 1.5px solid var(--coral);
+  color: #c73a48;
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  animation: pulse-dot 1s infinite;
+}
+
+.dispatchedDot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--coral);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-subtle);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.emergencyNote {
+  font-size: 11.5px;
+  color: var(--ink-faint);
+}
+
+.cancelBtn {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-color);
+  color: var(--ink);
+  padding: 9px 20px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.15s ease;
+}
+
+.cancelBtn:hover {
+  background: var(--bg-hover);
+}

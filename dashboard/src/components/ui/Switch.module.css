@@ -1,0 +1,5 @@
+/* Switch.module.css */
+.sw { width: 42px; height: 25px; border-radius: 20px; background: rgba(28,35,49,.15); position: relative; cursor: pointer; transition: background .25s var(--ease); flex-shrink: 0; }
+.sw.on { background: var(--mint); }
+.knob { width: 19px; height: 19px; border-radius: 50%; background: white; position: absolute; top: 3px; left: 3px; transition: left .25s var(--ease); box-shadow: 0 1px 4px rgba(0,0,0,.22); }
+.sw.on .knob { left: 20px; }

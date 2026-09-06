@@ -1,0 +1,11 @@
+/* components/ui/StatusRing.module.css */
+.ring {
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; flex-shrink: 0;
+  transition: all .3s var(--ease);
+  border: 2.5px solid transparent;
+}
+.stable   { background: var(--mint-soft);  color: #1c8a5f; border-color: rgba(47,189,133,.35); }
+.watch    { background: var(--amber-soft); color: #b8791f; border-color: rgba(245,169,63,.4); }
+.critical { background: var(--coral-soft); color: #c73a48; border-color: rgba(255,92,108,.45); animation: ring-pulse 1.3s infinite; }

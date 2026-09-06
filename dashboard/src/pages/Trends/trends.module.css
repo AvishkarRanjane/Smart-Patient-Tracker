@@ -1,0 +1,33 @@
+/* pages/Trends/trends.module.css */
+.head  { display:flex; align-items:baseline; justify-content:space-between; margin-bottom:18px; flex-wrap:wrap; gap:8px; }
+.title { font-size:22px; font-weight:800; letter-spacing:-0.02em; }
+.sub   { font-size:12.5px; color:var(--ink-faint); margin-top:2px; font-weight:500; }
+
+.canaryCard  { border-radius:var(--radius-lg); padding:18px 22px; margin-bottom:16px; }
+.canaryTitle { font-weight:700; font-size:14px; margin-bottom:14px; }
+.canaryGrid  { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+.canaryMetric { display:flex; flex-direction:column; }
+
+.metaLabel { font-size:10px; color:var(--ink-faint); font-weight:700; text-transform:uppercase; letter-spacing:.04em; }
+.metaVal   { font-size:20px; font-weight:800; margin-top:4px; letter-spacing:-0.02em; }
+.metaUnit  { font-size:11px; font-weight:500; color:var(--ink-faint); }
+.mint  { color:#1c8a5f; }
+.coral { color:#c73a48; }
+
+.panel    { border-radius:var(--radius-lg); padding:20px; margin-bottom:16px; }
+.panelHead { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px; margin-bottom:14px; }
+.panelTitle { font-weight:700; font-size:14px; }
+.tabs  { display:flex; gap:4px; flex-wrap:wrap; }
+.tab   { padding:6px 12px; border-radius:20px; font-size:11px; font-weight:600; cursor:pointer; border:none; background:rgba(28,35,49,.04); color:var(--ink-soft); font-family:inherit; transition:all .2s; }
+.tab.active { background:var(--blue); color:white; }
+.chartWrap  { height:230px; }
+
+.alarmCard  { border-radius:var(--radius-lg); padding:18px 22px; }
+.alarmRow   { display:flex; gap:32px; margin-bottom:14px; }
+.alarmStat  { display:flex; flex-direction:column; }
+.alarmTarget { display:flex; flex-direction:column; }
+.alarmNum   { font-size:28px; font-weight:800; letter-spacing:-0.02em; }
+.alarmLabel { font-size:11px; color:var(--ink-faint); font-weight:500; margin-top:2px; }
+.barWrap    { height:86px; }
+
+@media (max-width:900px) { .canaryGrid { grid-template-columns:repeat(2,1fr); } }

@@ -1,0 +1,30 @@
+/* app/app.module.css */
+.aurora { position:fixed; inset:0; z-index:0; pointer-events:none; overflow:hidden; }
+.blob {
+  position:absolute; border-radius:50%; filter:blur(72px); opacity:.42;
+  animation: float 18s ease-in-out infinite;
+}
+.b1 { width:560px; height:560px; top:-140px; left:-120px; background:var(--aurora-blue); animation-delay:0s; }
+.b2 { width:480px; height:480px; bottom:-100px; right:-80px;  background:var(--aurora-pink); animation-delay:-7s; }
+.b3 { width:420px; height:420px; top:30%; left:30%;            background:var(--aurora-mint); animation-delay:-13s; }
+
+.shell { position:relative; z-index:1; display:flex; height:100vh; overflow:hidden; }
+.main  { flex:1; display:flex; flex-direction:column; overflow:hidden; padding:16px 24px 16px 14px; box-sizing: border-box; }
+.content { flex:1; overflow-y:auto; padding-bottom:36px; padding-right:8px; box-sizing: border-box; }
+.content::-webkit-scrollbar { width:6px; }
+.content::-webkit-scrollbar-track { background:transparent; }
+.content::-webkit-scrollbar-thumb { background:rgba(28,35,49,.14); border-radius:10px; }
+
+/* ---- Glass utility classes consumed by components ---- */
+:global(.glass) {
+  background: var(--glass);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--glass-border);
+}
+:global(.glass-strong) {
+  background: var(--glass-strong);
+  backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(32px);
+  border: 1px solid var(--glass-border);
+}

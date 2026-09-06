@@ -1,0 +1,5 @@
+/* VitalChip.module.css */
+.chip { display: flex; align-items: center; gap: 7px; padding: 8px 10px; border-radius: 11px; background: rgba(28,35,49,0.038); }
+.chip svg { width: 13px; height: 13px; opacity: .6; flex-shrink: 0; }
+.num  { font-weight: 700; font-size: 13px; }
+.unit { font-size: 9px; color: var(--ink-faint); font-weight: 600; }
