@@ -1,6 +1,7 @@
 # Dependencies
 node_modules/
 */node_modules/
+dashboard/node_modules/
 
 # Production build output
 dist/
@@ -15,11 +16,16 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# Environment and local config
+# Environment and local config & secrets
+.env*
 .env
 .env.local
 .env.*.local
 *.local
+*.pem
+*.key
+credentials.json
+.vercel/
 
 # Editor and OS files
 .DS_Store
